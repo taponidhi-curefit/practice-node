@@ -1,0 +1,227 @@
+[
+  {
+    "_id": {"$oid": "628da7b904ae2924516606c0"},
+    "__v": 0,
+    "childFormRefs": [
+      {
+        "formId": "ai-trainer-gymfit-trainer-onboard",
+        "revision": 1
+      }
+    ],
+    "createdDate": {"$date": "2022-05-25T03:51:21.202Z"},
+    "formCompletedStatus": "COMPLETED",
+    "formId": "ai-trainer-gymfit-trainer-onboard",
+    "formRevision": 1,
+    "isSelf": true,
+    "lastScreenId": "s-view-plan-2",
+    "meta": {
+      "formId": "ai-trainer-gymfit-trainer-onboard",
+      "apiKey": "c85c84f1-6bbc-451b-a5f9-58614ca74813",
+      "prefillData": {
+        "USER_FEEDBACK": {
+          "value": " "
+        }
+      }
+    },
+    "screenDataResponse": {
+      "ai-trainer-gymfit-trainer-onboard-q-gender": {
+        "response": {
+          "gender": {
+            "score": 0,
+            "groupName": "CENTRE",
+            "possibleAnswerId": "FEMALE",
+            "displayText": "Female"
+          }
+        }
+      },
+      "ai-trainer-gymfit-trainer-onboard-q-age": {
+        "response": {
+          "age": 25
+        }
+      },
+      "ai-trainer-gymfit-trainer-onboard-q-weight": {
+        "response": {
+          "weight": 699
+        }
+      },
+      "ai-trainer-gymfit-trainer-onboard-q-height": {
+        "response": {
+          "height": 157.48
+        }
+      },
+      "ai-trainer-gymfit-trainer-onboard-q-body-type": {
+        "response": {
+          "bodyType": {
+            "score": 0,
+            "groupName": "CENTRE",
+            "possibleAnswerId": "AVERAGE",
+            "displayText": "Average",
+            "displaySubText": "25% - 32% body fat",
+            "mediaUrl": "/image/cfs/resources/body_type/average.png"
+          }
+        }
+      },
+      "ai-trainer-gymfit-trainer-onboard-q-fitness-experience": {
+        "response": {
+          "fitnessExperience": {
+            "score": 0,
+            "groupName": "CENTRE",
+            "possibleAnswerId": "NEW_TO_FITNESS",
+            "displayText": "New to fitness"
+          }
+        }
+      },
+      "ai-trainer-gymfit-trainer-onboard-q-goal-1": {
+        "response": {
+          "goal": {
+            "score": 0,
+            "groupName": "CENTRE",
+            "displayText": "Lose Weight",
+            "displaySubText": "Burn fat & get lean",
+            "possibleAnswerId": "LOSE WEIGHT",
+            "mediaUrl": "/image/cfs/resources/goals/lose_weight.png"
+          }
+        }
+      },
+      "ai-trainer-gymfit-trainer-onboard-q-focus-area-2": {
+        "response": {
+          "focusArea": {
+            "score": 0,
+            "groupName": "CENTRE",
+            "possibleAnswerId": "BELLY_FAT",
+            "displayText": "Belly Fat",
+            "displaySubText": "Core",
+            "meta": {
+              "derived": "ABT"
+            }
+          }
+        }
+      },
+      "ai-trainer-gymfit-trainer-onboard-q-muscle-split-type-2": {
+        "response": {
+          "muscleSplitType": {
+            "score": 0,
+            "groupName": "CENTRE",
+            "possibleAnswerId": "PUSH_PULL_LEGS",
+            "displayText": "Push Pull Legs"
+          }
+        }
+      },
+      "ai-trainer-gymfit-trainer-onboard-q-workout-days-1": {
+        "response": {
+          "workoutDays": [
+            {
+              "score": 0,
+              "groupName": "CENTRE",
+              "possibleAnswerId": "4",
+              "displayText": "Fri"
+            },
+            {
+              "score": 0,
+              "groupName": "CENTRE",
+              "possibleAnswerId": "1",
+              "displayText": "Tue"
+            },
+            {
+              "score": 0,
+              "groupName": "CENTRE",
+              "possibleAnswerId": "5",
+              "displayText": "Sat"
+            },
+            {
+              "score": 0,
+              "groupName": "CENTRE",
+              "possibleAnswerId": "2",
+              "displayText": "Wed"
+            },
+            {
+              "score": 0,
+              "groupName": "CENTRE",
+              "possibleAnswerId": "3",
+              "displayText": "Thu"
+            },
+            {
+              "score": 0,
+              "groupName": "CENTRE",
+              "possibleAnswerId": "0",
+              "displayText": "Mon"
+            }
+          ]
+        }
+      },
+      "ai-trainer-gymfit-trainer-onboard-q-result-pace-1": {
+        "response": {
+          "resultPace": {
+            "score": 0,
+            "groupName": "CENTRE",
+            "possibleAnswerId": "HEALTHY",
+            "displayText": "Healthy",
+            "displaySubText": "Lose 1-2 kg per month",
+            "meta": {
+              "displayTag": "RECOMMENDED"
+            }
+          }
+        }
+      },
+      "ai-trainer-gymfit-trainer-onboard-q-problem-area": {
+        "response": {
+          "problemArea": {
+            "score": 0,
+            "groupName": "CENTRE",
+            "possibleAnswerId": "4",
+            "displayText": "Shoulder pain/injury",
+            "meta": {
+              "derived": "SHOULDERS"
+            }
+          }
+        }
+      },
+      "ai-trainer-gymfit-trainer-onboard-q-view-plan-2": {
+        "response": {
+        }
+      }
+    },
+    "screenResponse": {
+      "s-age": {
+        "prevScreenId": "s-gender"
+      },
+      "s-weight": {
+        "prevScreenId": "s-age"
+      },
+      "s-height": {
+        "prevScreenId": "s-weight"
+      },
+      "s-body-type": {
+        "prevScreenId": "s-height"
+      },
+      "s-fitness-experience": {
+        "prevScreenId": "s-body-type"
+      },
+      "s-goal-1": {
+        "prevScreenId": "s-fitness-experience"
+      },
+      "s-focus-area-2": {
+        "prevScreenId": "s-goal-1"
+      },
+      "s-muscle-split-type-2": {
+        "prevScreenId": "s-focus-area-2"
+      },
+      "s-workout-days-1": {
+        "prevScreenId": "s-muscle-split-type-2"
+      },
+      "s-result-pace-1": {
+        "prevScreenId": "s-workout-days-1"
+      },
+      "s-problem-area": {
+        "prevScreenId": "s-result-pace-1"
+      },
+      "s-view-plan-2": {
+        "prevScreenId": "s-problem-area"
+      }
+    },
+    "submissionEpoch": 1653450791018,
+    "updatedDate": {"$date": "2022-05-25T03:53:11.019Z"},
+    "userId": "4077786",
+    "version": 2
+  }
+]
