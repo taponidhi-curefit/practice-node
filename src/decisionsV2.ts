@@ -1,4 +1,7 @@
 let fitnessExperience: { possibleAnswerId?: string, meta?: { derived?: string } };
+let fitnessLevel: { possibleAnswerId?: string, meta?: { derived?: string } };
+let age: string;
+
 
 const decisions = () => {
 	// d-fitness-level
@@ -45,9 +48,11 @@ const decisions = () => {
 	`);
 	// d-muscle-split-type
 	eval(`
-		if ((typeof fitnessLevel === 'undefined' || fitnessLevel === undefined || fitnessLevel.possibleAnswerId === undefined || fitnessLevel.possibleAnswerId === 'NOVICE') && (goal.possibleAnswerId === 'LOSE WEIGHT' || goal.possibleAnswerId === 'GAIN MUSCLE')) {
+		if (parseInt(age) > 45) {
+			's-muscle-split-type-3';
+		} else if ((typeof fitnessLevel === 'undefined' || fitnessLevel === undefined || fitnessLevel.possibleAnswerId === undefined || fitnessLevel.possibleAnswerId === 'NOVICE') && (goal.possibleAnswerId === 'LOSE WEIGHT' || goal.possibleAnswerId === 'GAIN MUSCLE')) {
 			's-muscle-split-type-5';
-		} else if (parseInt(age) > 45 || goal.possibleAnswerId === 'TONE UP' || goal.possibleAnswerId === 'MARATHON') {
+		} else if (goal.possibleAnswerId === 'TONE UP' || goal.possibleAnswerId === 'MARATHON') {
 			's-muscle-split-type-3';
 		} else if (goal.possibleAnswerId === 'GAIN MUSCLE') {
 			's-muscle-split-type-1';
@@ -61,11 +66,11 @@ const decisions = () => {
 	`);
 	// d-workout-days
 	eval(`
-		if (parseInt(age) > 45 || (goal.possibleAnswerId === 'TONE UP' || goal.possibleAnswerId === 'MARATHON') && (typeof muscleSplitType !== 'undefined' && muscleSplitType !== undefined && muscleSplitType.possibleAnswerId !== undefined && muscleSplitType.possibleAnswerId === 'PUSH_PULL_LEGS')) {
+		if ((parseInt(age) > 45 || goal.possibleAnswerId === 'TONE UP' || goal.possibleAnswerId === 'MARATHON') && (typeof muscleSplitType !== 'undefined' && muscleSplitType !== undefined && muscleSplitType.possibleAnswerId !== undefined && muscleSplitType.possibleAnswerId === 'PUSH_PULL_LEGS')) {
 			's-workout-days-2';
 		} else if (typeof muscleSplitType !== 'undefined' && muscleSplitType !== undefined && muscleSplitType.possibleAnswerId !== undefined && (((goal.possibleAnswerId === 'GAIN MUSCLE' || goal.possibleAnswerId === 'LOSE WEIGHT') && muscleSplitType.possibleAnswerId === 'PUSH_PULL_LEGS') || (goal.possibleAnswerId === 'GET SHREDDED' && muscleSplitType.possibleAnswerId === 'SINGLE'))) {
 			's-workout-days-1';
-		} else if (typeof muscleSplitType !== 'undefined' && muscleSplitType !== undefined && muscleSplitType.possibleAnswerId !== undefined && (muscleSplitType.possibleAnswerId === 'SINGLE' || (goal.possibleAnswerId === 'GET SHREDDED' && muscleSplitType.possibleAnswerId === 'MULTI'))) {
+		} else if (typeof muscleSplitType !== 'undefined' && muscleSplitType !== undefined && muscleSplitType.possibleAnswerId !== undefined && (muscleSplitType.possibleAnswerId === 'SINGLE' || (goal.possibleAnswerId === 'GET SHREDDED' && muscleSplitType.possibleAnswerId === 'MULTI') || (parseInt(age) > 45 && muscleSplitType.possibleAnswerId === 'SINGLE'))) {
 			's-workout-days-3';
 		} else if (goal.possibleAnswerId === 'POWER LIFTING' || (goal.possibleAnswerId === 'LOSE WEIGHT' && typeof muscleSplitType !== 'undefined' && muscleSplitType !== undefined && muscleSplitType.possibleAnswerId !== undefined && muscleSplitType.possibleAnswerId === 'UPPER_LOWER')) {
 			's-workout-days-4';
